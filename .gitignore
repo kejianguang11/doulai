@@ -2,8 +2,14 @@
 *.apk
 *.idsig
 
-# Decompiled Java sources (regeneratable)
-qygame-release-decompiled/sources/
+# Native libraries (binary, 95MB)
+qygame-release-decompiled/resources/lib/
+
+# Game resource assets (images/textures too large)
+qygame-release-decompiled/resources/assets/assets/main/native/
+qygame-release-decompiled/resources/assets/assets/resources/native/
+qygame-release-decompiled/resources/assets/assets/resources/import/
+qygame-release-decompiled/resources/assets/GCloudVoice/
 
 # Repack working directory
 repack/unpacked/

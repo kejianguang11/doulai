@@ -1,0 +1,59 @@
+package com.igexin.push.c;
+
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+/* JADX INFO: loaded from: classes.dex */
+class f extends com.igexin.push.f.b.f {
+    private static f c;
+    private boolean e;
+    private static final String b = b.a + f.class.getName();
+    public static final AtomicBoolean a = new AtomicBoolean(false);
+
+    private f() {
+        super(10L, (byte) 0);
+        this.p = true;
+    }
+
+    private void b(long j) {
+        a(j, TimeUnit.MILLISECONDS);
+    }
+
+    public static synchronized f g() {
+        if (c == null) {
+            c = new f();
+        }
+        return c;
+    }
+
+    @Override // com.igexin.c.a.d.a.e
+    public final int c() {
+        return 20150607;
+    }
+
+    @Override // com.igexin.push.f.b.f
+    public final void h() {
+        a(b.c, TimeUnit.MILLISECONDS);
+        if (this.e) {
+            com.igexin.c.a.c.a.a(b, "detect task already stop");
+            com.igexin.c.a.c.a.a(b + "|detect task already stop", new Object[0]);
+            return;
+        }
+        long j = b.c;
+        com.igexin.c.a.c.a.a(b + "|" + (b.c / 1000) + "s passed, do task method, start redect ~~~~", new Object[0]);
+        boolean zE = com.igexin.push.g.c.e();
+        com.igexin.push.core.e.n = zE;
+        if (zE) {
+            c.a().c();
+            return;
+        }
+        long j2 = b.c;
+        com.igexin.c.a.c.a.a(b + "|" + (b.c / 1000) + "s passed, network is unavailable, stop ###", new Object[0]);
+    }
+
+    public final void i() {
+        this.p = false;
+        this.e = true;
+        l();
+    }
+}

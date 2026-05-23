@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/authsdk_lly_loading"
+    android:background="@drawable/authsdk_bg_loading_dialog"
+    android:layout_width="60dp"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/authsdk_iv_loading"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/authsdk_waiting_icon"
+        android:scaleType="fitXY"/>
+</LinearLayout>
