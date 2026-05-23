@@ -1,0 +1,23 @@
+# APK files (too large)
+*.apk
+*.idsig
+
+# Decompiled Java sources (regeneratable)
+qygame-release-decompiled/sources/
+
+# Repack working directory
+repack/unpacked/
+repack/tmp_compare/
+repack/*.apk
+repack/*.idsig
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
